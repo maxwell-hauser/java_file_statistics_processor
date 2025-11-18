@@ -11,6 +11,8 @@ Thumbs.db
 .settings/
 bin/
 out/
+target/
+dependency-reduced-pom.xml
 
 # Generated outputs (optional)
 *.log
