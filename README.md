@@ -6,18 +6,12 @@ Simple Swing-based utility that reads a text file containing an integer count fo
 - Output format: first line repeats file size, next lines = values (10 per line), followed by min, max, total, average (one per line)
 - UI: uses dialogs to choose input and output files; shows a summary when done
 
-## Quick Start (Windows PowerShell)
+## Quick Start
 
 ```powershell
-# Navigate to the project folder
 Push-Location "g:\My Drive\GITHUB\java\java_file_statistics_processor_gh"
-
-# Compile
 javac FileStatisticsProcessor.java
-
-# Run (GUI will prompt for files)
 java FileStatisticsProcessor
-
 Pop-Location
 ```
 

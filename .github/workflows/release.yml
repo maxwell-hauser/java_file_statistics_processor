@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+
+    - name: Compile Java source
+      run: javac FileStatisticsProcessor.java
+
+    - name: Package JAR
+      run: jar --create --file java-file-statistics-processor-${{ github.ref_name }}.jar --main-class FileStatisticsProcessor FileStatisticsProcessor.class
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: java-file-statistics-processor-${{ github.ref_name }}.jar
+        generate_release_notes: true

@@ -13,7 +13,6 @@ public class FileStatisticsProcessor {
     public static void main(String[] args) throws IOException {
         EventQueue.invokeLater(() -> {
             try {
-                // Intro dialog
                 JOptionPane.showMessageDialog(
                         null,
                         "                                           CSC 229 – Project 3\n"
@@ -32,7 +31,6 @@ public class FileStatisticsProcessor {
                         "Project 3 – Hauser",
                         JOptionPane.INFORMATION_MESSAGE);
 
-                // File choosers
                 JFileChooser chooser = new JFileChooser();
                 chooser.setDialogTitle("Open Data File");
                 chooser.setFileFilter(new FileNameExtensionFilter("Text Data Files", "txt"));
