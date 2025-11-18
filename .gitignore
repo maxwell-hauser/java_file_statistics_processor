@@ -1,0 +1,16 @@
+# Compiled classes / jars
+*.class
+*.jar
+
+# OS / IDE clutter
+.DS_Store
+Thumbs.db
+.idea/
+.project
+.classpath
+.settings/
+bin/
+out/
+
+# Generated outputs (optional)
+*.log
